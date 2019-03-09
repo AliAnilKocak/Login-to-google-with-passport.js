@@ -6,21 +6,12 @@ const mongoose = require('mongoose');
 const keys = require('./config/keys')
 
 
-
 app.set('view engine', 'ejs');
 
 
-
-
-
-mongoose.connect(keys.mongodb.dbURI,()=>{
-  console.log('connected');
+mongoose.connect(keys.mongodb.dbURI, () => {
+    console.log('connected');
 });
-
-
-
-
-
 
 
 app.use('/auth', authRoutes);
